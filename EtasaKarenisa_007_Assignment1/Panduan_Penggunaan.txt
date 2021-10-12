@@ -1,0 +1,15 @@
+Link GitHub: ...
+
+Cara Penggunaan Aplikasi:
+1. Buka aplikasi EtasaKarenisa_007_Assignment1.cs di IDE.
+2. Run Code dengan mono.
+3. Ketik nama terlebih dahulu.
+4. Pilih menu dari 1-8, jika memilih menu:
+    1. Ketik jumlah tinggi pyramid alphabet yang diinginkan untuk memunculkan pyramid.
+    2. Ketik jumlah tinggi pyramid angka yang diinginkan untuk memunculkan pyramid.
+    3. Ketik angka yang diinginkan untuk memunculkan faktorial.
+    4. Ketik beberapa angka yang diinginkan untuk memunculkan angka yang diputarbalik.
+    5. Ketik angka yang diinginkan dari 0 hingga 9 untuk memunculkan konversi angka menjadi pelafalan angka.
+    6. Ketik beberapa karakter yang diinginkan untuk memunculkan benar tidaknya karakter tersebut bersifat palindrom.
+    7. Menyediakan informasi developer.
+    8. Keluar dari program.
