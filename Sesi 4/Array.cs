@@ -14,6 +14,19 @@ namespace Sesi_4
             {
                 Console.Write(obj + " ");
             }
+
+            Console.WriteLine();
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                numbers[i] = i * i;
+                Console.Write(numbers[i] + " ");
+            }
+
+            Console.WriteLine();
+            foreach (string name in names)
+            {
+                Console.Write(name + " ");
+            }
         }
     }
 }
