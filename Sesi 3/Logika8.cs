@@ -17,41 +17,41 @@ namespace Sesi_3
             Console.WriteLine("Please enter a start number: ");
             num1 = int.Parse(Console.ReadLine());
             Console.WriteLine();
-            Console.WriteLine("Please enter a limit number: ");
+            Console.WriteLine("Please enter a counter number: ");
             num2 = int.Parse(Console.ReadLine());
             Console.WriteLine();
             Console.WriteLine("Choose an operator? [*, +, -, /]: ");
             choice = Console.ReadLine();
             if (choice == "*")
             {
-                for (int i = num1; i <= num2; i++)
+                Console.Write("Numbers = ");
+                for (int i = 1; i <= num2; i++)
                 {
-                    Console.Write(i + " ");
-                    i *= i;
+                    Console.Write($" {i * num1}");
                 }
             }
             else if (choice == "/")
             {
-                for (int i = num1; i <= num2; i++)
+                Console.Write("Numbers = ");
+                for (int i = 1; i <= num2; i++)
                 {
-                    Console.Write(i + " ");
-                    i /= i;
+                    Console.Write($" {i / num1}");
                 }
             }
             else if (choice == "+")
             {
-                for (int i = num1; i <= num2; i++)
+                Console.Write("Numbers = ");
+                for (int i = 1; i <= num2; i++)
                 {
-                    Console.Write(i + " ");
-                    i += i;
+                    Console.Write($" {i + num1}");
                 }
             }
             else if (choice == "-")
             {
-                for (int i = num1; i <= num2; i++)
+                Console.Write("Numbers = ");
+                for (int i = 1; i <= num2; i++)
                 {
-                    Console.Write(i + " ");
-                    i -= i;
+                    Console.Write($" {i - num1}");
                 }
             }
         }
