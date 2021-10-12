@@ -1,4 +1,4 @@
-Link GitHub: ...
+Link GitHub: https://github.com/etasakaren/OCBC-H8.git
 
 Cara Penggunaan Aplikasi:
 1. Buka aplikasi EtasaKarenisa_007_Assignment1.cs di IDE.
@@ -13,3 +13,5 @@ Cara Penggunaan Aplikasi:
     6. Ketik beberapa karakter yang diinginkan untuk memunculkan benar tidaknya karakter tersebut bersifat palindrom.
     7. Menyediakan informasi developer.
     8. Keluar dari program.
+
+Terima kasih.
