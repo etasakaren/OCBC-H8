@@ -12,7 +12,7 @@ namespace oop_2_3_4
             num2 = Num2;
         }
 
-        public virtual void calculation()
+        public virtual void calculation() //override is same method name but has different method.
         {
             if (option == "*")
             {
@@ -38,9 +38,9 @@ namespace oop_2_3_4
 
     }
 
-    class overide : Program
+    class ChildProgram : Program //child
     {
-        public override void calculation()
+        public override void calculation()//override is same method name but has different method.
         {
             if (option == "%")
             {
@@ -118,15 +118,15 @@ namespace oop_2_3_4
                             Console.WriteLine("Choose an option [+, -, *, /]: ");
                             number.option = Console.ReadLine();
                             number.calculation();
-                            number = new overide();
+                            Program newNumber = new ChildProgram(); //overriding
                             Console.WriteLine("Input the first number: ");
-                            number.num1 = double.Parse(Console.ReadLine());
+                            newNumber.num1 = double.Parse(Console.ReadLine());
                             Console.WriteLine("Input the second number: ");
-                            number.num2 = double.Parse(Console.ReadLine());
+                            newNumber.num2 = double.Parse(Console.ReadLine());
                             Console.WriteLine("This is an example of overriding: ");
                             Console.WriteLine("Choose another option [%]: ");
-                            number.option = Console.ReadLine();
-                            number.calculation();
+                            newNumber.option = Console.ReadLine();
+                            newNumber.calculation();
                             break;
                         }
                     case 4:
