@@ -1,0 +1,16 @@
+D:\aetaProjects\C# Projects\Sesi 5\oop_2\bin\Debug\net5.0\oop_2.exe
+D:\aetaProjects\C# Projects\Sesi 5\oop_2\bin\Debug\net5.0\oop_2.deps.json
+D:\aetaProjects\C# Projects\Sesi 5\oop_2\bin\Debug\net5.0\oop_2.runtimeconfig.json
+D:\aetaProjects\C# Projects\Sesi 5\oop_2\bin\Debug\net5.0\oop_2.runtimeconfig.dev.json
+D:\aetaProjects\C# Projects\Sesi 5\oop_2\bin\Debug\net5.0\oop_2.dll
+D:\aetaProjects\C# Projects\Sesi 5\oop_2\bin\Debug\net5.0\ref\oop_2.dll
+D:\aetaProjects\C# Projects\Sesi 5\oop_2\bin\Debug\net5.0\oop_2.pdb
+D:\aetaProjects\C# Projects\Sesi 5\oop_2\obj\Debug\net5.0\oop_2.csproj.AssemblyReference.cache
+D:\aetaProjects\C# Projects\Sesi 5\oop_2\obj\Debug\net5.0\oop_2.GeneratedMSBuildEditorConfig.editorconfig
+D:\aetaProjects\C# Projects\Sesi 5\oop_2\obj\Debug\net5.0\oop_2.AssemblyInfoInputs.cache
+D:\aetaProjects\C# Projects\Sesi 5\oop_2\obj\Debug\net5.0\oop_2.AssemblyInfo.cs
+D:\aetaProjects\C# Projects\Sesi 5\oop_2\obj\Debug\net5.0\oop_2.csproj.CoreCompileInputs.cache
+D:\aetaProjects\C# Projects\Sesi 5\oop_2\obj\Debug\net5.0\oop_2.dll
+D:\aetaProjects\C# Projects\Sesi 5\oop_2\obj\Debug\net5.0\ref\oop_2.dll
+D:\aetaProjects\C# Projects\Sesi 5\oop_2\obj\Debug\net5.0\oop_2.pdb
+D:\aetaProjects\C# Projects\Sesi 5\oop_2\obj\Debug\net5.0\oop_2.genruntimeconfig.cache
