@@ -9,9 +9,6 @@ create table tb_siswa(
 	
 );
 
-
-
-
 alter table tb_siswa alter column j_kelamin varchar(10);
 
 select * from tb_siswa;
@@ -32,5 +29,3 @@ select * from tb_siswa where tg_lahir between '09-10-2010' and '10-10-2010';
 update tb_siswa set nama = 'bejo sutedjo' where nis = '10001';
 
 delete tb_siswa where nis = '10002';
-
-update staff set nama='amber',nik='10019' where joindate = '2021-10-13';
