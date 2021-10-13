@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\aetaProjects\\C# Projects\\Sesi 5\\oop_2_3_4\\oop_2_3_4.csproj",
+      "projectUniqueName": "D:\\aetaProjects\\OCBC Projects\\Sesi 5\\oop_2_3_4\\oop_2_3_4.csproj",
       "projectName": "oop_2_3_4",
-      "projectPath": "D:\\aetaProjects\\C# Projects\\Sesi 5\\oop_2_3_4\\oop_2_3_4.csproj",
+      "projectPath": "D:\\aetaProjects\\OCBC Projects\\Sesi 5\\oop_2_3_4\\oop_2_3_4.csproj",
       "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "D:\\aetaProjects\\C# Projects\\Sesi 5\\oop_2_3_4\\obj\\",
+      "outputPath": "D:\\aetaProjects\\OCBC Projects\\Sesi 5\\oop_2_3_4\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",

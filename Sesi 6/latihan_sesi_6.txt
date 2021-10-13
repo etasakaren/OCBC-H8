@@ -1,0 +1,56 @@
+-- a - b
+create table staff(
+    nik int PRIMARY KEY,
+    nama varchar(50),
+    alamat varchar(200),
+    handphone varchar(15),
+);
+
+-- c
+    insert into staff(nik, nama, alamat, handphone) VALUES ('11111', 'Adinda', 'Jakarta', '08123189000');
+ 
+-- d
+    insert into staff(nik, nama, alamat, handphone) VALUES ('12121', 'Aqil', 'Surabaya', '08128289120');
+
+-- e
+    ALTER TABLE staff ADD joindate Date;
+    insert into staff(nik, nama, alamat, handphone, joindate) VALUES ('12121', 'Aqil', 'Surabaya', '08128289120', '2021/10/13');
+
+-- f
+    select top 2 * from staff;
+
+-- g
+    select top 3 * from staff;
+
+-- h
+create table staffoutsource(
+    nik int PRIMARY KEY,
+    nama varchar(50),
+    alamat varchar(200),
+    handphone varchar(15),
+    joindate Date,
+);
+
+-- i
+    insert into staffoutsource(nik, nama, alamat, handphone, joindate) VALUES ('12122', 'Abil', 'Surabaya', '08128289121', '2021/10/13');
+    insert into staffoutsource(nik, nama, alamat, handphone, joindate) VALUES ('12123', 'Anil', 'Surabaya', '08128289122', '2021/10/13');
+    insert into staffoutsource(nik, nama, alamat, handphone, joindate) VALUES ('12124', 'Asil', 'Surabaya', '08128289123', '2021/10/13');
+    insert into staffoutsource(nik, nama, alamat, handphone, joindate) VALUES ('12125', 'Apil', 'Surabaya', '08128289124', '2021/10/13');
+    insert into staffoutsource(nik, nama, alamat, handphone, joindate) VALUES ('12126', 'Adil', 'Surabaya', '08128289125', '2021/10/13');
+    insert into staffoutsource(nik, nama, alamat, handphone, joindate) VALUES ('12127', 'Abi', 'Surabaya', '08128289126', '2021/10/13');
+    insert into staffoutsource(nik, nama, alamat, handphone, joindate) VALUES ('12128', 'Adi', 'Surabaya', '08128289127', '2021/10/13');
+    insert into staffoutsource(nik, nama, alamat, handphone, joindate) VALUES ('12129', 'Asyi', 'Surabaya', '081282891271', '2021/10/13');
+    insert into staffoutsource(nik, nama, alamat, handphone, joindate) VALUES ('12120', 'Arsy', 'Surabaya', '08128289221', '2021/10/13');
+    insert into staffoutsource(nik, nama, alamat, handphone, joindate) VALUES ('12132', 'Aam', 'Surabaya', '08128289421', '2021/10/13');
+
+-- j
+    select * from staff inner join staffoutsource on staff.nik = staffoutsource.nik where staff.joindate = staffoutsource.joindate;
+
+-- k 
+    select * from staff right join staffoutsource on staff.nik = staffoutsource.nik;
+
+-- l
+    select * from staff left join staffoutsource on staff.nik = staffoutsource.nik;
+
+-- m
+    select * from staff full join staffoutsource on staff.nik = staffoutsource.nik

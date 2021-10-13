@@ -1,0 +1,36 @@
+
+create table tb_siswa(
+	id_siswa int identity(1,1) primary key,
+	nis  varchar(10) not null,
+	nama varchar(50) not null,
+	alamat varchar(100) null,
+	tg_lahir date null,
+	j_kelamin varchar(1) null,
+	
+);
+
+
+
+
+alter table tb_siswa alter column j_kelamin varchar(10);
+
+select * from tb_siswa;
+
+insert into tb_siswa(nis,nama,alamat,tg_lahir,j_kelamin)
+values('10001','bejo','surabaya','2010-10-06','pria');
+insert into tb_siswa(nis,nama,alamat,tg_lahir,j_kelamin)
+values('10002','ani','malang','2010-10-06','wanita');
+
+select * from tb_siswa where nis = '10001';
+
+select nama,tg_lahir from tb_siswa where nama = 'ani';
+
+select * from tb_siswa where alamat like 'su%';
+
+select * from tb_siswa where tg_lahir between '09-10-2010' and '10-10-2010';
+
+update tb_siswa set nama = 'bejo sutedjo' where nis = '10001';
+
+delete tb_siswa where nis = '10002';
+
+update staff set nama='amber',nik='10019' where joindate = '2021-10-13';
