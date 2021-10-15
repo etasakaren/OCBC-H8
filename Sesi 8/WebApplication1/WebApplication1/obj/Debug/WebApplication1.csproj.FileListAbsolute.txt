@@ -166,3 +166,4 @@ D:\aetaProjects\OCBC Projects\Sesi 8\WebApplication1\WebApplication1\obj\Debug\W
 D:\aetaProjects\OCBC Projects\Sesi 8\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
 D:\aetaProjects\OCBC Projects\Sesi 8\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
 D:\aetaProjects\OCBC Projects\Sesi 8\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\aetaProjects\OCBC Projects\Sesi 8\WebApplication1\WebApplication1\bin\MySql.Data.dll
