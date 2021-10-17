@@ -1,0 +1,34 @@
+Link GitHub: https://github.com/etasakaren/OCBC-H8.git
+
+Cara Penggunaan Aplikasi:
+1. Buka folde EtasaKarenisa_007_Assignment3 di IDE.
+2. Nyalakan XAMPP Apache dan MySQL.
+3. Run Code dengan dotnet run atau dotnet run watch.
+4. Jika index.html tidak otomatis terbuka di default browser, ketik https://localhost:5001/swagger/index.html di browser.
+5. Pilih menu AuthManagement, submenu register untuk registrasi akun terlebih dahulu. Jika sudah memiliki akun maka pilih submenu login untuk login akun.
+6. Klik Try it out.
+7. Pada notes JSON, ganti nilai dari masing-masing key, misal:
+  "username": "string",
+  "email": "user@example.com",
+  "password": "string"
+
+   menjadi:
+  "username": "usernameMu",
+  "email": "emailMu@example.com",
+  "password": "passwordMu"
+
+8. Klik Execute.
+9. Jika berhasil maka response code berupa 2** serta menunjukkan response data.
+10. Copy nilai dari token pada response data.
+11. Klik tombol Authorize di sebelah kanan atas menu AuthManagement.
+12. Klik Authorize.
+13. Pilih menu MoviesApi, terdapat 1-5 menu. Jika memilih menu:
+    1. GET, klik Try it out kemudian klik Execute. Jika berhasil maka response code berupa 2** serta menunjukkan response data.
+    2. POST, klik Try it out kemudian ganti nilai dari masing-masing key (seperti step ke-7) kemudian klik Execute. Jika berhasil maka response code berupa 2** serta menunjukkan response data.
+    3. GET{id}, klik Try it out kemudian masukkan id lalu klik Execute. Jika berhasil maka response code berupa 2** serta menunjukkan response data.
+    4. PUT{id}, Klik Try it out kemudian masukkan id. Ganti nilai dari masing-masing key (seperti step ke-7) kemudian klik Execute. Jika berhasil maka response code berupa 2** serta menunjukkan response data.
+    5. DELETE{id}, Klik Try it out kemudian masukkan id. Jika berhasil maka response code berupa 2** serta menunjukkan response data.
+14. Klik tombol Authorize di seleah kanan atas menu AuthManagement.
+15. Klik Logout.
+
+Terima kasih.
