@@ -42,22 +42,25 @@ namespace TodoAppwithJWT
                 Configuration.GetConnectionString("DefaultConnection")
             ));
 
-            services.AddAuthentication(options => {
+            services.AddAuthentication(options =>
+            {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(jwt => {
+            }).AddJwtBearer(jwt =>
+            {
                 var key = Encoding.ASCII.GetBytes(Configuration["JwtConfig:Secret"]);
 
                 jwt.SaveToken = true;
-                jwt.TokenValidationParameters = new TokenValidationParameters {
+                jwt.TokenValidationParameters = new TokenValidationParameters
+                {
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(key),
                     ValidateIssuer = false,
                     ValidateAudience = false,
                     ValidateLifetime = true,
                     RequireExpirationTime = false
-                } ;
+                };
             });
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                         .AddEntityFrameworkStores<ApiDbContext>();
@@ -66,6 +69,26 @@ namespace TodoAppwithJWT
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TodoAppwithJWT", Version = "v1" });
+                var securitySchema = new OpenApiSecurityScheme
+                {
+                    Description = "Using the Authorization header with the Bearer scheme.",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "bearer",
+                    Reference = new OpenApiReference
+                    {
+                        Type = ReferenceType.SecurityScheme,
+                        Id = "Bearer"
+                    }
+                };
+
+                c.AddSecurityDefinition("Bearer", securitySchema);
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+          {
+              { securitySchema, new[] { "Bearer" } }
+          });
             });
         }
 
