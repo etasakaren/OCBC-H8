@@ -22,7 +22,6 @@ D:\aetaProjects\OCBC Projects\Sesi 12\UnitTest_Mock\UnitTest_Mock\obj\Debug\net5
 D:\aetaProjects\OCBC Projects\Sesi 12\UnitTest_Mock\UnitTest_Mock\obj\Debug\net5.0\staticwebassets\UnitTest_Mock.StaticWebAssets.xml
 D:\aetaProjects\OCBC Projects\Sesi 12\UnitTest_Mock\UnitTest_Mock\obj\Debug\net5.0\scopedcss\bundle\UnitTest_Mock.styles.css
 D:\aetaProjects\OCBC Projects\Sesi 12\UnitTest_Mock\UnitTest_Mock\obj\Debug\net5.0\UnitTest_Mock.RazorTargetAssemblyInfo.cache
-D:\aetaProjects\OCBC Projects\Sesi 12\UnitTest_Mock\UnitTest_Mock\obj\Debug\net5.0\UnitTest_Mock.csproj.CopyComplete
 D:\aetaProjects\OCBC Projects\Sesi 12\UnitTest_Mock\UnitTest_Mock\obj\Debug\net5.0\UnitTest_Mock.dll
 D:\aetaProjects\OCBC Projects\Sesi 12\UnitTest_Mock\UnitTest_Mock\obj\Debug\net5.0\ref\UnitTest_Mock.dll
 D:\aetaProjects\OCBC Projects\Sesi 12\UnitTest_Mock\UnitTest_Mock\obj\Debug\net5.0\UnitTest_Mock.pdb
