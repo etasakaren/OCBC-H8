@@ -1,0 +1,11 @@
+D:\aetaProjects\OCBC Projects\Sesi 13\CoreWebApi\CoreWebApi\bin\Release\net5.0\publish\CoreWebApi.exe
+D:\aetaProjects\OCBC Projects\Sesi 13\CoreWebApi\CoreWebApi\bin\Release\net5.0\publish\appsettings.Development.json
+D:\aetaProjects\OCBC Projects\Sesi 13\CoreWebApi\CoreWebApi\bin\Release\net5.0\publish\appsettings.json
+D:\aetaProjects\OCBC Projects\Sesi 13\CoreWebApi\CoreWebApi\bin\Release\net5.0\publish\CoreWebApi.dll
+D:\aetaProjects\OCBC Projects\Sesi 13\CoreWebApi\CoreWebApi\bin\Release\net5.0\publish\CoreWebApi.deps.json
+D:\aetaProjects\OCBC Projects\Sesi 13\CoreWebApi\CoreWebApi\bin\Release\net5.0\publish\CoreWebApi.runtimeconfig.json
+D:\aetaProjects\OCBC Projects\Sesi 13\CoreWebApi\CoreWebApi\bin\Release\net5.0\publish\CoreWebApi.pdb
+D:\aetaProjects\OCBC Projects\Sesi 13\CoreWebApi\CoreWebApi\bin\Release\net5.0\publish\Microsoft.OpenApi.dll
+D:\aetaProjects\OCBC Projects\Sesi 13\CoreWebApi\CoreWebApi\bin\Release\net5.0\publish\Swashbuckle.AspNetCore.Swagger.dll
+D:\aetaProjects\OCBC Projects\Sesi 13\CoreWebApi\CoreWebApi\bin\Release\net5.0\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\aetaProjects\OCBC Projects\Sesi 13\CoreWebApi\CoreWebApi\bin\Release\net5.0\publish\Swashbuckle.AspNetCore.SwaggerUI.dll
