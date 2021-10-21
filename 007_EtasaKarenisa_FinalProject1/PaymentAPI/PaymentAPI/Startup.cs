@@ -42,7 +42,7 @@ namespace PaymentAPI
             {
                 options.SuppressAsyncSuffixInActionNames = false;
             });
-            services.AddDbContext<ApiDbContext>(options => options.UseNpgsql("User ID=postgres;Password=postgres;Host=host.docker.internal;Port=5433;Database=PaymentAPI;Pooling=true;TrustServerCertificate=True"));
+            services.AddDbContext<ApiDbContext>(options => options.UseNpgsql("Host=ec2-54-208-17-82.compute-1.amazonaws.com;Database=df8p034jd99qsc;Username=svofhgvawovmzp;Password=995ec463cbd68a31169e0aafd5de20607b8685384fe5f84a8a315df03538365a;SSL Mode=Require;Trust Server Certificate=true"));
 
             services.AddAuthentication(options =>
             {
