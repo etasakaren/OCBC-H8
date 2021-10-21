@@ -2,7 +2,7 @@
 
 namespace PaymentAPI.Migrations
 {
-    public partial class Addingauthentication : Migration
+    public partial class Authentication : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

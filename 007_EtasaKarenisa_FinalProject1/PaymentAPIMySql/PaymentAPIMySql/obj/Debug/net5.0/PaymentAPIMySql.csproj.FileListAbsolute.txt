@@ -51,4 +51,3 @@ D:\aetaProjects\OCBC Projects\007_EtasaKarenisa_FinalProject1\PaymentAPIMySql\Pa
 D:\aetaProjects\OCBC Projects\007_EtasaKarenisa_FinalProject1\PaymentAPIMySql\PaymentAPIMySql\obj\Debug\net5.0\ref\PaymentAPIMySql.dll
 D:\aetaProjects\OCBC Projects\007_EtasaKarenisa_FinalProject1\PaymentAPIMySql\PaymentAPIMySql\obj\Debug\net5.0\PaymentAPIMySql.pdb
 D:\aetaProjects\OCBC Projects\007_EtasaKarenisa_FinalProject1\PaymentAPIMySql\PaymentAPIMySql\obj\Debug\net5.0\PaymentAPIMySql.genruntimeconfig.cache
-D:\aetaProjects\OCBC Projects\007_EtasaKarenisa_FinalProject1\PaymentAPIMySql\PaymentAPIMySql\obj\Debug\net5.0\PaymentAPIMySql.csproj.CopyComplete

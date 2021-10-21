@@ -42,7 +42,7 @@ namespace PaymentAPI
             {
                 options.SuppressAsyncSuffixInActionNames = false;
             });
-            services.AddDbContext<ApiDbContext>(options => options.UseNpgsql("Host=ec2-54-208-17-82.compute-1.amazonaws.com;Database=df8p034jd99qsc;Username=svofhgvawovmzp;Password=995ec463cbd68a31169e0aafd5de20607b8685384fe5f84a8a315df03538365a;SSL Mode=Require;Trust Server Certificate=true"));
+            services.AddDbContext<ApiDbContext>(options => options.UseNpgsql("Host=ec2-50-19-210-145.compute-1.amazonaws.com;Port=5432;Database=dclc397gieb0r2;Username=pxwgjoexeeelih;Password=f3db21cf9c38da00085d7626f7b3fdbb97e7361bf4b91e980f8951d2595aff9b;SSL Mode=Require;Trust Server Certificate=true"));
 
             services.AddAuthentication(options =>
             {
