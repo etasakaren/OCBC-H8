@@ -1,0 +1,303 @@
+{
+	"info": {
+		"_postman_id": "300d2f4b-1348-4324-8be7-9a1cc077bd80",
+		"name": "PaymentAPIMySql",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44394/api/paymentdetails/5",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6ImZlNWQ4NDBhLTFhMzEtNGQ1ZC1hMTc5LTc5NzJhYjQxY2QyZSIsImVtYWlsIjoiaGVsbG9raXR0eUBnbWFpbC5jb20iLCJzdWIiOiJoZWxsb2tpdHR5QGdtYWlsLmNvbSIsImp0aSI6IjNkNmFjMWFjLTY5YmYtNDVmNC1iZDk4LWE2NWRmOWY1NTAzMyIsIm5iZiI6MTYzNDgyNzM0NSwiZXhwIjoxNjM0ODI5MTQ1LCJpYXQiOjE2MzQ4MjczNDV9._p3vX_8xgd2LlsA4COtRxlPXeZ65cn0KJYfHlcwpQ2A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44394/api/paymentdetails/5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44394",
+					"path": [
+						"api",
+						"paymentdetails",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44394/api/paymentdetails/5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6ImZlNWQ4NDBhLTFhMzEtNGQ1ZC1hMTc5LTc5NzJhYjQxY2QyZSIsImVtYWlsIjoiaGVsbG9raXR0eUBnbWFpbC5jb20iLCJzdWIiOiJoZWxsb2tpdHR5QGdtYWlsLmNvbSIsImp0aSI6IjNkNmFjMWFjLTY5YmYtNDVmNC1iZDk4LWE2NWRmOWY1NTAzMyIsIm5iZiI6MTYzNDgyNzM0NSwiZXhwIjoxNjM0ODI5MTQ1LCJpYXQiOjE2MzQ4MjczNDV9._p3vX_8xgd2LlsA4COtRxlPXeZ65cn0KJYfHlcwpQ2A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44394/api/paymentdetails/5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44394",
+					"path": [
+						"api",
+						"paymentdetails",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44394/api/paymentdetails/5",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6ImZlNWQ4NDBhLTFhMzEtNGQ1ZC1hMTc5LTc5NzJhYjQxY2QyZSIsImVtYWlsIjoiaGVsbG9raXR0eUBnbWFpbC5jb20iLCJzdWIiOiJoZWxsb2tpdHR5QGdtYWlsLmNvbSIsImp0aSI6IjNkNmFjMWFjLTY5YmYtNDVmNC1iZDk4LWE2NWRmOWY1NTAzMyIsIm5iZiI6MTYzNDgyNzM0NSwiZXhwIjoxNjM0ODI5MTQ1LCJpYXQiOjE2MzQ4MjczNDV9._p3vX_8xgd2LlsA4COtRxlPXeZ65cn0KJYfHlcwpQ2A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"paymentDetailId\": 5,\r\n  \"cardOwnerName\": \"Abu Jahal\",\r\n  \"cardNumber\": \"1929 8888 3030 8888\",\r\n  \"expirationDate\": \"2025-10-21T14:44:17.267Z\",\r\n  \"securityCode\": \"000928\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44394/api/paymentdetails/5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44394",
+					"path": [
+						"api",
+						"paymentdetails",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44394/api/paymentdetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6ImZlNWQ4NDBhLTFhMzEtNGQ1ZC1hMTc5LTc5NzJhYjQxY2QyZSIsImVtYWlsIjoiaGVsbG9raXR0eUBnbWFpbC5jb20iLCJzdWIiOiJoZWxsb2tpdHR5QGdtYWlsLmNvbSIsImp0aSI6IjNkNmFjMWFjLTY5YmYtNDVmNC1iZDk4LWE2NWRmOWY1NTAzMyIsIm5iZiI6MTYzNDgyNzM0NSwiZXhwIjoxNjM0ODI5MTQ1LCJpYXQiOjE2MzQ4MjczNDV9._p3vX_8xgd2LlsA4COtRxlPXeZ65cn0KJYfHlcwpQ2A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"paymentDetailId\": 5,\r\n  \"cardOwnerName\": \"Abu Jahal\",\r\n  \"cardNumber\": \"1929 8888 2929 8888\",\r\n  \"expirationDate\": \"2025-10-21T14:44:17.267Z\",\r\n  \"securityCode\": \"000928\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44394/api/paymentdetails",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44394",
+					"path": [
+						"api",
+						"paymentdetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44394/api/paymentdetails",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6ImZlNWQ4NDBhLTFhMzEtNGQ1ZC1hMTc5LTc5NzJhYjQxY2QyZSIsImVtYWlsIjoiaGVsbG9raXR0eUBnbWFpbC5jb20iLCJzdWIiOiJoZWxsb2tpdHR5QGdtYWlsLmNvbSIsImp0aSI6IjNkNmFjMWFjLTY5YmYtNDVmNC1iZDk4LWE2NWRmOWY1NTAzMyIsIm5iZiI6MTYzNDgyNzM0NSwiZXhwIjoxNjM0ODI5MTQ1LCJpYXQiOjE2MzQ4MjczNDV9._p3vX_8xgd2LlsA4COtRxlPXeZ65cn0KJYfHlcwpQ2A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44394/api/paymentdetails",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44394",
+					"path": [
+						"api",
+						"paymentdetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44394/api/authmanagement/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"hellokitty\",\r\n    \"email\":\"hellokitty@gmail.com\",\r\n    \"password\":\"Hellokitty1!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44394/api/authmanagement/register",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44394",
+					"path": [
+						"api",
+						"authmanagement",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44394/api/authmanagement/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"hellokitty@gmail.com\",\r\n    \"password\":\"Hellokitty1!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44394/api/authmanagement/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44394",
+					"path": [
+						"api",
+						"authmanagement",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44394/api/authmanagement/refreshtoken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6ImZlNWQ4NDBhLTFhMzEtNGQ1ZC1hMTc5LTc5NzJhYjQxY2QyZSIsImVtYWlsIjoiaGVsbG9raXR0eUBnbWFpbC5jb20iLCJzdWIiOiJoZWxsb2tpdHR5QGdtYWlsLmNvbSIsImp0aSI6IjNkNmFjMWFjLTY5YmYtNDVmNC1iZDk4LWE2NWRmOWY1NTAzMyIsIm5iZiI6MTYzNDgyNzM0NSwiZXhwIjoxNjM0ODI5MTQ1LCJpYXQiOjE2MzQ4MjczNDV9._p3vX_8xgd2LlsA4COtRxlPXeZ65cn0KJYfHlcwpQ2A\",\r\n    \"refreshToken\": \"7NIW0WZTF0RTWIT2V37YB70RSUY87N9RW7X407a0848-0950-4f55-b935-7bc73c64a827\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44394/api/authmanagement/refreshtoken",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44394",
+					"path": [
+						"api",
+						"authmanagement",
+						"refreshtoken"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

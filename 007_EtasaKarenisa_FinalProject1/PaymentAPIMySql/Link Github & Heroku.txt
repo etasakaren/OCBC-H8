@@ -1,0 +1,3 @@
+Link Github (Mysql & Postgres): https://github.com/etasakaren/OCBC-H8/tree/master/007_EtasaKarenisa_FinalProject1
+Link Heroku (Postgres): https://paymentapi-fp1.herokuapp.com/weatherforecast 
+Link Heroku (Mysql): https://paymentapimysql-fp1.herokuapp.com/weatherforecast

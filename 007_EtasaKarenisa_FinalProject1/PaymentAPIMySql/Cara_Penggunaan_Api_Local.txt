@@ -1,0 +1,31 @@
+1. Buka file PaymentAPIysql.sln di visual studio.
+2. Tekan tombol build IIS Express.
+3. Jika index.html tidak otomatis terbuka di default browser, ketik https://localhost:*****/swagger/index.html di browser.
+4. Pilih menu AuthManagement, submenu register untuk registrasi akun terlebih dahulu. Jika sudah memiliki akun maka pilih submenu login untuk login akun.
+5. Klik Try it out.
+6. Pada notes JSON, ganti nilai dari masing-masing key, misal:
+  "username": "string",
+  "email": "user@example.com",
+  "password": "string"
+
+   menjadi:
+  "username": "usernameMu",
+  "email": "emailMu@example.com",
+  "password": "passwordMu"
+
+7. Klik Execute.
+8. Jika berhasil maka response code berupa 2** serta menunjukkan response data.
+9. Copy nilai dari token pada response data.
+10. Klik tombol Authorize di sebelah kanan atas menu AuthManagement.
+11. Klik Authorize.
+12. Pilih menu PaymentDetails, terdapat 1-6 menu. Jika memilih menu:
+    1. RefreshToken, klik Try it out kemudian copy token dan refresh token dari response data login, paste ke Request Refresh Token. Jika berhasil maka response code berupa 2** serta menunjukkan response data.
+    2. GET, klik Try it out kemudian klik Execute. Jika berhasil maka response code berupa 2** serta menunjukkan response data.
+    3. POST, klik Try it out kemudian ganti nilai dari masing-masing key (seperti step ke-7) kemudian klik Execute. Jika berhasil maka response code berupa 2** serta menunjukkan response data.
+    4. GET{id}, klik Try it out kemudian masukkan id lalu klik Execute. Jika berhasil maka response code berupa 2** serta menunjukkan response data.
+    5. PUT{id}, Klik Try it out kemudian masukkan id. Ganti nilai dari masing-masing key (seperti step ke-7) kemudian klik Execute. Jika berhasil maka response code berupa 2** serta menunjukkan response data.
+    6. DELETE{id}, Klik Try it out kemudian masukkan id. Jika berhasil maka response code berupa 2** serta menunjukkan response data.
+13. Klik tombol Authorize di seleah kanan atas menu AuthManagement.
+14. Klik Logout.
+
+Terima kasih.
