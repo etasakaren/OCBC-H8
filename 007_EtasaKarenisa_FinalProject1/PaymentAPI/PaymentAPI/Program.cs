@@ -22,8 +22,7 @@ namespace PaymentAPI
                 {
                     var port = Environment.GetEnvironmentVariable("PORT");
 
-                    webBuilder.UseStartup<Startup>()
-                    .UseUrls("http://*:" + port);
+                    webBuilder.UseStartup<Startup>();
 
                 });
     }
