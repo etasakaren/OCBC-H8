@@ -1,3 +1,13 @@
 Link Github (Mysql & Postgres): https://github.com/etasakaren/OCBC-H8/tree/master/007_EtasaKarenisa_FinalProject1
-Link Heroku (Postgres): https://paymentapi-fp1.herokuapp.com/weatherforecast 
-Link Heroku (Mysql): https://paymentapimysql-fp1.herokuapp.com/weatherforecast
+Link Heroku (Postgres): https://paymentapi-fp1.herokuapp.com/* 
+Link Heroku (Mysql): https://paymentapimysql-fp1.herokuapp.com/*
+
+* => api/authmanagement/register
+* => api/authmanagement/login
+* => api/authmanagement/refreshtoken
+* => api/paymentdetails (METHOD: GET, POST)
+* => api/paymentdetails/{id} (METHOD: GET, DELETE, PUT)
+
+Mohon dicoba di postman, karena website di browser tidak ada bearer token yang dimana harus 
+memasukkan token untuk mengakses data pada website.
+
