@@ -9,6 +9,25 @@ export class AppComponent {
   title = 'aeta-angular-learn';
   counter = 0;
 
+  people: any[] = [
+    {
+      "name":"Kitty",
+      "home":"Uruguay"
+    },
+    {
+      "name":"Doraemon",
+      "home":"Japan"
+    },
+    {
+      "name":"Harry",
+      "home":"UK"
+    },
+    {
+      "name":"Richie",
+      "home":"USA"
+    }
+  ];
+
   addCounter() {
     this.counter++;
   }
@@ -16,12 +35,12 @@ export class AppComponent {
   minCounter() {
     if (this.counter > 0) {
       this.counter--;
-    }else{
+    } else {
       this.counter = 0;
     }
   }
 
-  resetCounter(){
+  resetCounter() {
     this.counter = 0;
   }
 }

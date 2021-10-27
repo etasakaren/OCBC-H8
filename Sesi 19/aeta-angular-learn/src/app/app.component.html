@@ -4,6 +4,18 @@
 <app-header></app-header>
 <app-button (clickEventHandler)="addCounter()" name="+"></app-button>
 <app-button (clickEventHandler)="minCounter()" name="-"></app-button>
-<app-button (clickEventHandler)="resetCounter()" name="Reset"></app-button>
+<app-button (clickEventHandler)="resetCounter()" name="Reset" *ngIf="counter != 0"></app-button>
 
+<p *ngIf="counter == 0">Counter clicked is 0!</p>
 <p>{{counter}} x clicked!</p>
+
+<h2>List of People</h2>
+<ul>
+  <li *ngFor="let person of people" [class.text-red]="person.home==='USA'" [class.text-blue]="person.home==='UK'" [class.text-green]="person.home==='Japan'">
+      {{person.name|json}}  {{person.home}}
+  </li>
+</ul>
+
+<h2>
+  {{9929292929 | fileSize: 'GB'}}
+</h2>
