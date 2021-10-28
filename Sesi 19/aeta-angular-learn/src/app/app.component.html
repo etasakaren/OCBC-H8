@@ -1,4 +1,46 @@
-<h1>Test Angular</h1>
+<h1>Template-Driven Form</h1>
+<form (ngSubmit)="handleFormOnSubmit(taskForm)" #taskForm="ngForm">
+    <div class="form-group">
+        <label for="name">Task name</label>
+        <input type="text" name="taskName" id="name" ngModel #taskName="ngModel" required />
+        <div [hidden]="taskName.valid || taskName.pristine">
+            Task name should be written!
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="category">Category</label>
+        <select class="form-control" name="category" id="category" ngModel #category="ngModel" required>
+        <option value=""> -- Input here -- </option>
+        <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+      </select>
+
+        <div [hidden]="category.value !== '' || category.pristine">
+            You have to choose a category!
+        </div>
+    </div>
+
+    <input type="submit" value="submit" [disabled]="!taskForm.form.valid" />
+</form>
+<h1>Reactive Form</h1>
+<form [formGroup]="loginData" (ngSubmit)="handleLoginForm()">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" formControlName="username" />
+    </div>
+    <span *ngIf="username?.errors?.minlength">Username is not valid. Minimum length is 5.</span>
+    <span *ngIf="username?.errors?.required || category.pristine">Username cannot be empty.</span>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" formControlName="password">
+    </div>
+    <span *ngIf="password?.errors?.required || !category.pristine">Password cannot be empty.</span>
+
+    <input type="submit" value="Login">
+</form>
+
+
 
 <comp-aside></comp-aside>
 <app-header></app-header>
@@ -11,13 +53,13 @@
 
 <h2>List of People</h2>
 <ul>
-  <li *ngFor="let person of people" [class.text-red]="person.home==='USA'" [class.text-blue]="person.home==='UK'" [class.text-green]="person.home==='Japan'">
-      {{person.name|json}}  {{person.home}}
-  </li>
+    <li *ngFor="let person of people" [class.text-red]="person.home==='USA'" [class.text-blue]="person.home==='UK'" [class.text-green]="person.home==='Japan'">
+        {{person.name|json}} {{person.home}}
+    </li>
 </ul>
 
 <h2>
-  {{9929292929 | fileSize: 'GB'}}
+    {{9929292929 | fileSize: 'GB'}}
 </h2>
 
 <app-todo-dashboard></app-todo-dashboard>

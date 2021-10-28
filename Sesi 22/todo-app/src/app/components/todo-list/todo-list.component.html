@@ -2,11 +2,12 @@
 <ol *ngFor="let todo of todos; let i=index;" class="list-group">
     <li class="list-group-item d-flex justify-content-between align-items-start">
         <div class="ms-3 me-auto">
-            <div *ngIf ="todo.edit==false"class="content {{(todo.completed ? 'done' : '')}}">
-                {{i+1}}. {{todo.content}}
+            <div *ngIf="todo.edit==false" class="content {{(todo.completed ? 'done' : '')}}">
+                {{i+1}}. {{todo.content}} - {{todo.deadline}}
             </div>
-            <div *ngIf ="todo.edit==true"class="content {{(todo.completed ? 'done' : '')}}">
+            <div *ngIf="todo.edit==true" class="content {{(todo.completed ? 'done' : '')}}">
                 <input type="text" name="inputTodo" placeholder="{{todo.content}}" class="form-control" [(ngModel)]="inputTodo">
+                <input type="date" name="inputDeadline" placeholder="{{todo.deadline}}" class="form-control" [(ngModel)]="inputDeadline">
                 <input type="submit" value="Edit Todo" class="btn btn-primary" (click)="editSaveTodo(todo)">
             </div>
         </div>

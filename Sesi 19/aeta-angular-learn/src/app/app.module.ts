@@ -7,6 +7,8 @@ import { ButtonComponent } from './button/button.component';
 import { AsideComponent } from './aside/aside.component';
 import { FileSizePipe } from './file-size/file-size.pipe';
 import { TodoDashboardModule } from './todo-dashboard/todo-dashboard.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { TodoDashboardModule } from './todo-dashboard/todo-dashboard.module';
   ],
   imports: [
     BrowserModule,
-    TodoDashboardModule
+    TodoDashboardModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

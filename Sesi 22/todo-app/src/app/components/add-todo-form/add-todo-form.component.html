@@ -1,6 +1,16 @@
-<form>
-    <div class ="input-group mb-3">
-        <input type="text" name="inputTodo" placeholder="Enter todo..." class="form-control" [(ngModel)]="inputTodo">
-        <input type="submit" value="Add Todo" class="btn btn-primary" (click)="addTodo()">
+<h1>
+    Reactive Todo List Form</h1>
+<form [formGroup]="todoData" (ngSubmit)="handleTodoForm()">
+    <div class="input-group mb-3">
+        <input type="text" placeholder="Enter todo..." class="form-control" formControlName="content" [(ngModel)]="inputTodo">
     </div>
+
+
+    <div class=input-group mb-3>
+        <input type="date" placeholder="Enter deadline [YYYY-MM-DD]" class="form-control " formControlName="deadline" [(ngModel)]="inputDeadline ">
+    </div>
+
+    <button type="submit " class="btn btn-primary ">Add Todo</button>
+    <span class="warning " *ngIf="content?.errors?.required && !content?.pristine">* Content cannot be empty.</span>
+    <span class="warning " *ngIf="deadline?.errors?.required && !deadline?.pristine">* Deadline cannot be empty.</span>
 </form>

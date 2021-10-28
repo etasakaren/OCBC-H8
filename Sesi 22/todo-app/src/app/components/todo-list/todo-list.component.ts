@@ -1,5 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { Todo } from 'src/app/models/todo';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Todo } from 'src/app/models/Todo';
+
 
 @Component({
   selector: 'app-todo-list',
@@ -9,6 +11,7 @@ import { Todo } from 'src/app/models/todo';
 export class TodoListComponent implements OnInit {
   todos: Todo[] = [];
   inputTodo: string = '';
+  inputDeadline: string = '';
   @Output() newTodoEvent = new EventEmitter<Todo>();
   constructor() { }
 
@@ -18,11 +21,13 @@ export class TodoListComponent implements OnInit {
         content: 'First todo',
         completed: false,
         edit: false,
+        deadline: "2021-12-21"
       },
       {
         content: 'Second todo',
         completed: false,
-        edit: false
+        edit: false,
+        deadline: "2022-12-12"
       }
     ]
   }
@@ -48,15 +53,19 @@ export class TodoListComponent implements OnInit {
       todo.content = this.inputTodo;
       todo.completed = false;
       todo.edit = false;
+      todo.deadline = this.inputDeadline;
 
       alert("You have updated your todo.");
       this.inputTodo = '';
     }else{
-      alert("Your todo content is empty.");
+      alert("Your todo is empty.");
     }
   }
 
   addTodo(todo: Todo) {
     this.todos.push(todo);
   }
+
+  
+  
 }
