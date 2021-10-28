@@ -1,0 +1,17 @@
+<div class="container justify-content-center">
+    <ol class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+
+            <table>
+                <td *ngFor="let country of countryFilled; let i = index">
+                    <tr>{{country.country}}</tr>
+                    <tr>{{country.population.toLocaleString()}} People</tr>
+                </td>
+            </table>
+
+        </li>
+    </ol>
+    <button class="btn btn-warning btn-sm ">
+        <p>Go back</p>
+    </button>
+</div>

@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { ButtonComponent } from './button/button.component';
 import { AsideComponent } from './aside/aside.component';
 import { FileSizePipe } from './file-size/file-size.pipe';
+import { TodoDashboardModule } from './todo-dashboard/todo-dashboard.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FileSizePipe } from './file-size/file-size.pipe';
     FileSizePipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    TodoDashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

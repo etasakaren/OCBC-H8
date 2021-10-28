@@ -1,0 +1,28 @@
+<div class="d-flex justify-content-center">
+    <h5>Three Most Populated Countries</h5>
+</div>
+<div class="container" [ngClass]="{check:sortPopulation()}">
+    <ol *ngFor="let country of countryFilled; let i = index" class="list-group">
+        <li *ngIf="i<3" class="list-group-item d-flex justify-content-between align-items-start">
+            <!-- <button (click)="onButtonClick(i)"> -->
+            <td>
+                <tr>{{country.country}}</tr>
+                <tr>{{country.population.toLocaleString()}} People</tr>
+            </td>
+            <!-- </button> -->
+        </li>
+    </ol>
+</div>
+<div class="d-flex justify-content-center">
+    <h5>Three Largest Area of Countries</h5>
+</div>
+<div class="container" [ngClass]="{check:sortArea()}">
+    <ol *ngFor="let country of countryFilled; let i = index" class="list-group">
+        <li *ngIf="i<3" class="list-group-item d-flex justify-content-between align-items-start">
+            <td>
+                <tr>{{country.country}}</tr>
+                <tr>{{country.area.toLocaleString()}} km&#178;</tr>
+            </td>
+        </li>
+    </ol>
+</div>
