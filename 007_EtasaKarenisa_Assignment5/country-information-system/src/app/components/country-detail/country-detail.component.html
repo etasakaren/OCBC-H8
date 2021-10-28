@@ -1,4 +1,4 @@
-<div class="container justify-content-center">
+<!-- <div class="container justify-content-center">
     <ol class="list-group">
         <li class="list-group-item d-flex justify-content-between align-items-start">
             <table>
@@ -16,6 +16,40 @@
         </li>
     </ol>
     <button (click)="goBack()" class=" btn btn-warning btn-sm ">
+        <p>Go back</p>
+    </button>
+</div> -->
+
+<div>
+    <div class="row card-group">
+        <div class="center" *ngFor="let country of countryFilled; let i = index">
+            <div *ngIf="country.id==idCountry">
+                <div class="card border-0">
+                    <h4>{{country.country}}</h4>
+
+                    <table>
+                        <td class="green">
+                            <tr>Capital</tr>
+                            <tr>Area</tr>
+                            <tr>Population</tr>
+                            <tr>GDP</tr>
+                            <tr>Currency</tr>
+                        </td>
+                        <td class="space">
+                            <tr>: {{country.country}}</tr>
+                            <tr>: {{country.area.toLocaleString()}} km <sup>2</sup></tr>
+                            <tr>: {{country.population.toLocaleString()}} People</tr>
+                            <tr>: {{country.GDP.toLocaleString()}} USD</tr>
+                            <tr>: {{country.currency}}</tr>
+                        </td>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <button (click)="goBack() " class=" btn btn-warning btn-sm ">
         <p>Go back</p>
     </button>
 </div>

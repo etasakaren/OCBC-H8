@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CountryFilled } from 'src/app/models/CountryFilled';
 import { Location } from '@angular/common';
 
@@ -9,11 +9,16 @@ import { Location } from '@angular/common';
   styleUrls: ['./all-countries.component.css']
 })
 export class AllCountriesComponent extends CountryFilled {
-  constructor(
-    private route: ActivatedRoute,
-    private location: Location,
-  ) {
+  @Input()
+  index?: number;
+  constructor(public router: Router, private route: ActivatedRoute, private location: Location,){
     super();
+  }
+
+  onButtonClick(index: number){
+    this.index=index;
+    console.log(this.index);
+    this.router.navigate(['country-detail', index]);
   }
 
   goBack(): void {

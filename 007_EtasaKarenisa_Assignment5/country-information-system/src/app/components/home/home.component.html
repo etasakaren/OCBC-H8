@@ -1,30 +1,37 @@
 <div class="d-flex justify-content-center">
-    <h5>Three Most Populated Countries</h5>
+    <h4>Three Most Populated Countries</h4>
 </div>
-<div class="container" [ngClass]="{check:sortPopulation()}">
-    <ol *ngFor="let country of countryFilled; let i = index" class="list-group">
-        <li *ngIf="i<3" class="list-group-item d-flex justify-content-between align-items-start">
-            <button (click)="onButtonClick(country.id)">
-            <td>
-                <tr>{{country.country}}</tr>
-                <tr>{{country.population.toLocaleString()}} People</tr>
-            </td>
-            </button>
-        </li>
-    </ol>
+<div [ngClass]="{check:sortPopulation()}">
+    <div class="row card-group">
+        <div class="col-4" *ngFor="let country of countryFilled; let i = index">
+            <div *ngIf="i<3" class="card" (click)="onButtonClick(country.id)">
+                <div>
+                    <h4>{{country.country}}</h4>
+                </div>
+                <div>
+                    {{country.population.toLocaleString()}}
+                </div>
+                <div>
+                    People
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="d-flex justify-content-center">
-    <h5>Three Largest Area of Countries</h5>
+    <h4>Three Largest Area of Countries</h4>
 </div>
-<div class="container" [ngClass]="{check:sortArea()}">
-    <ol *ngFor="let country of countryFilled; let i = index" class="list-group">
-        <li *ngIf="i<3" class="list-group-item d-flex justify-content-between align-items-start">
-            <button (click)="onButtonClick(country.id)">
-            <td>
-                <tr>{{country.country}}</tr>
-                <tr>{{country.area.toLocaleString()}} km <sup>2</sup></tr>
-            </td>
-            </button>
-        </li>
-    </ol>
+<div [ngClass]="{check:sortArea()}">
+    <div class="row card-group">
+        <div class="col-4" *ngFor="let country of countryFilled; let i = index">
+            <div *ngIf="i<3" class="card" (click)="onButtonClick(country.id)">
+                <div>
+                    <h4>{{country.country}}</h4>
+                </div>
+                <div>
+                    {{country.area.toLocaleString()}} km <sup>2</sup>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
