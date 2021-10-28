@@ -15,7 +15,14 @@ export class CountryDetailComponent extends CountryFilled {
   ) {
     super();
   }
-  
+
+  idCountry?: number;
+
+  ngOnInit(): void {
+    this.idCountry=this.route.snapshot.params['id'];
+    console.log(this.route.snapshot.params)
+
+  }
 
   goBack(): void {
     this.location.back();

@@ -6,7 +6,6 @@
         <li *ngIf="i<3" class="list-group-item d-flex justify-content-between align-items-start">
             <button (click)="onButtonClick(country.id)">
             <td>
-                {{country.id}}
                 <tr>{{country.country}}</tr>
                 <tr>{{country.population.toLocaleString()}} People</tr>
             </td>
@@ -20,10 +19,12 @@
 <div class="container" [ngClass]="{check:sortArea()}">
     <ol *ngFor="let country of countryFilled; let i = index" class="list-group">
         <li *ngIf="i<3" class="list-group-item d-flex justify-content-between align-items-start">
+            <button (click)="onButtonClick(country.id)">
             <td>
                 <tr>{{country.country}}</tr>
-                <tr>{{country.area.toLocaleString()}} km&#178;</tr>
+                <tr>{{country.area.toLocaleString()}} km <sup>2</sup></tr>
             </td>
+            </button>
         </li>
     </ol>
 </div>
