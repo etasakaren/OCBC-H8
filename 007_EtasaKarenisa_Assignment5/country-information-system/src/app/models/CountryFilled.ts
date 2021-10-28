@@ -2,6 +2,7 @@ import { Country } from "./Country";
 
 export class CountryFilled {
     countryFilled: Country[] = [{
+        id: 1,
         country: 'United States',
         capital: 'Washington, D.C.',
         population: 325365189,
@@ -9,6 +10,7 @@ export class CountryFilled {
         GDP: '20.94',
         currency: 'United States Dollar',
     }, {
+        id: 2,
         country: 'China',
         capital: 'Beijing',
         population: 1446645323,
@@ -17,6 +19,7 @@ export class CountryFilled {
         currency: 'Renminbi'
     },
     {
+        id: 3,
         country: 'Japan',
         capital: 'Tokyo',
         population: 125967182,
@@ -25,6 +28,7 @@ export class CountryFilled {
         currency: 'Yen'
     },
     {
+        id: 4,
         country: 'Russia',
         capital: 'Moscow',
         population: 146171015,
@@ -33,6 +37,7 @@ export class CountryFilled {
         currency: 'Ruble'
     },
     {
+        id: 5,
         country: 'Canada',
         capital: 'Ottawa',
         population: 38148000,

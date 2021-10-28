@@ -1,5 +1,6 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { CountryFilled } from 'src/app/models/CountryFilled';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,22 @@ import { CountryFilled } from 'src/app/models/CountryFilled';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent extends CountryFilled {
+  @Input()
+  index?: number;
+  constructor(public router: Router){
+    super();
+  }
   
+  onButtonClick(index: number){
+    this.index=index;
+    console.log(this.index);
+    this.router.navigate(['country-detail', index]);
+  }
+
+  get Details() {
+    return this.index;
+}
+
   sortPopulation() {
     this.countryFilled.sort((n1, n2) => {
       if (n1.population < n2.population) {
