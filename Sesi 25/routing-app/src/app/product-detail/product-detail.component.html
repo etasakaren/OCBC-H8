@@ -1,0 +1,13 @@
+<h5 class="card-title">Product id is: {{product.id}}</h5>
+<table>
+    <tr>
+        <td class="style">Code</td>
+        <td class="style">Name</td>
+        <td class="style">Price</td>
+    </tr>
+    <tr *ngFor="let product of products">
+        <td *ngIf="productId==product.code">{{product.code}}</td>
+        <td *ngIf="productId==product.code">{{product.name}}</td>
+        <td *ngIf="productId==product.code">{{product.price}}</td>
+    </tr>
+</table>
