@@ -47,25 +47,34 @@ export class TodoListComponent implements OnInit {
   editTodo(todo: Todo) {
     todo.edit = true;
   }
-
+  isSubmitted = false;
   editSaveTodo(todo: Todo) {
-    if (todo.content != null) {
-      todo.content = this.inputTodo;
-      todo.completed = false;
-      todo.edit = false;
-      todo.deadline = this.inputDeadline;
+    this.isSubmitted = true;
+    let errors = [];
 
-      alert("You have updated your todo.");
-      this.inputTodo = '';
-    }else{
-      alert("Your todo is empty.");
-    }
+    if (this.inputTodo != "" && this.inputDeadline != "") {
+      todo.content = this.inputTodo,
+        todo.completed = false,
+        todo.edit = false,
+        todo.deadline = this.inputDeadline
+    } else {
+      if (this.inputTodo == "" || this.inputDeadline == "") {
+        todo.content = todo.content,
+        todo.completed = todo.completed,
+        todo.edit = todo.edit,
+        todo.deadline = todo.deadline
+        this.inputTodo = "";
+        this.inputDeadline = "";
+        errors.push("Fill in the edited form.");
+      }
+      alert(errors);
+    };
   }
 
   addTodo(todo: Todo) {
     this.todos.push(todo);
   }
 
-  
-  
+
+
 }

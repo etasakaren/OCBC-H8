@@ -40,26 +40,25 @@ export class AddTodoFormComponent {
 
   handleTodoForm() {
     this.isSubmitted = true;
-        const todo: Todo = {
+    const todo: Todo = {
       content: this.inputTodo,
       completed: false,
       edit: false,
       deadline: this.inputDeadline
     };
 
+    let errors = [];
+
     if (this.inputTodo != "" && this.inputDeadline != "") {
       this.newTodoEvent.emit(todo);
       this.inputTodo = "";
-      this.inputDeadline="";
-    }else if(this.inputTodo != ""){
-      alert("Fill in todo content!");
-    }else if(this.inputDeadline != ""){
-      alert("Choose deadline!");
-    }else{
-      alert("Content and Deadline are empty!");
+      this.inputDeadline = "";
+    } else {
+      if (this.inputTodo == "" || this.inputDeadline == "") {
+        errors.push("Fill in the form.");
+      }
+      alert(errors);
     };
-    console.log(this.todoData.get('content'))
-    console.log(this.todoData.get('deadline'))
   }
 
   get content() {

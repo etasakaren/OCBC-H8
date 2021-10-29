@@ -28,14 +28,14 @@
         <label for="username">Username</label>
         <input type="text" id="username" name="username" formControlName="username" />
     </div>
-    <span *ngIf="username?.errors?.minlength">Username is not valid. Minimum length is 5.</span>
-    <span *ngIf="username?.errors?.required ">Username cannot be empty.</span>
+    <span *ngIf="username?.errors?.minlength && !content?.pristine">Username is not valid. Minimum length is 5.</span>
+    <span *ngIf="username?.errors?.required && !content?.pristine ">Username cannot be empty.</span>
 
     <div class="form-group">
         <label for="password">Password</label>
         <input type="password" name="password" id="password" formControlName="password">
     </div>
-    <span *ngIf="password?.errors?.required ">Password cannot be empty.</span>
+    <span *ngIf="password?.errors?.required && !content?.pristine">Password cannot be empty.</span>
 
     <input type="submit" value="Login">
 </form>

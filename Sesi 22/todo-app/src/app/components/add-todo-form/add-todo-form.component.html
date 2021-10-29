@@ -11,6 +11,6 @@
     </div>
 
     <button type="submit " class="btn btn-primary ">Add Todo</button>
-    <span class="warning " *ngIf="content?.errors?.required && !content?.pristine">* Content cannot be empty.</span>
-    <span class="warning " *ngIf="deadline?.errors?.required && !deadline?.pristine">* Deadline cannot be empty.</span>
+    <span class="warning " *ngIf="(content?.errors?.required && !content?.pristine) && isSubmitted==false">* Content cannot be empty.</span>
+    <span class="warning " *ngIf="(deadline?.errors?.required && !deadline?.pristine) && isSubmitted==false">* Deadline cannot be empty.</span>
 </form>
