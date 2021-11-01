@@ -1,0 +1,31 @@
+<div class="overflow-x-auto">
+    <button class="btn btn-info btn-sm" (click)="create()">
+        Create
+    </button>
+    <table class="table w-full">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let read of reads">
+                <th>{{read.id}}</th>
+                <td>{{read.title}}</td>
+                <td>{{read.firstName}} {{read.lastName}}</td>
+                <td>{{read.email}}</td>
+                <td><button class="btn btn-error btn-sm" (click)="delete(read.id)">
+                    Delete
+                </button></td>
+                <td><button class="btn btn-warning btn-sm" (click)="edit(read.id)">
+                    Edit
+                </button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

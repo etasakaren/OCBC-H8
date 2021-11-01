@@ -1,0 +1,58 @@
+<div class="auth-wrapper">
+    <form class="form-signin" [formGroup]="createForm" (ngSubmit)="create()">
+        <h3 class="h3 mb-3 font-weight-normal">Please Fill In The Form</h3>
+        <div class="form-group mt-3">
+            <h4>Title</h4>
+            <input type="text" class="form-control" formControlName="title" placeholder="Enter title" required>
+            <span style="color:red;" *ngIf="title && title.touched && title.invalid">
+                Title is required. Minimum length is 5.
+            </span>
+        </div>
+        <div class="form-group mt-3">
+            <h4>First Name</h4>
+            <input type="text" class="form-control" formControlName="firstName" placeholder="Enter first name" required>
+            <span style="color:red;" *ngIf="firstName && firstName.touched && firstName.invalid">
+                First Name is required. Minimum length is 5.
+            </span>
+        </div>
+        <div class="form-group mt-3">
+            <h4>Last Name</h4>
+            <input type="text" class="form-control" formControlName="lastName" placeholder="Enter last name" required>
+            <span style="color:red;" *ngIf="lastName && lastName.touched && lastName.invalid">
+                Last Name is required. Minimum length is 5.
+            </span>
+        </div>
+        <div class="form-group mt-3">
+            <h4>Role</h4>
+            <input type="text" class="form-control" formControlName="role" placeholder="Enter role" required>
+            <span style="color:red;" *ngIf="role && role.touched && role.invalid">
+                Role is required. Minimum length is 4.
+            </span>
+        </div>
+        <div class="form-group mt-3">
+            <h4>Email</h4>
+            <input type="email" class="form-control" formControlName="email" placeholder="Enter email" required>
+            <span style="color:red;" *ngIf="email && email.touched && email.invalid">
+                Email is required. Must input email type.
+            </span>
+        </div>
+        <div class="form-group mt-3">
+            <h4>Password</h4>
+            <input type="password" class="form-control" formControlName="password" placeholder="Password" required>
+            <span style="color:red;" *ngIf="password && password.touched && password.invalid">
+                Password is required. Minimum length is 5.
+            </span>
+        </div>
+        <div class="form-group mt-3">
+            <h4>Confirm Password</h4>
+            <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Confirm Password" required>
+            <span style="color:red;" *ngIf="confirmPassword && confirmPassword.touched && confirmPassword.invalid">
+                Password is required. Minimum length is 5.
+            </span>
+        </div>
+        <button type="submit" class="btn btn-accent">Create</button>
+        <button class="btn btn-error" (click)=" cancel() ">
+            Cancel
+        </button>
+    </form>
+</div>
