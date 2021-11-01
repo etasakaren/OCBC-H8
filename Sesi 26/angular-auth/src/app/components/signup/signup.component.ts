@@ -18,27 +18,28 @@ export class SignupComponent implements OnInit {
     email: new FormControl('', [Validators.required, Validators.email]),
   })
 
-  get name(){
+  get name() {
     return this.signupForm.get('name');
   }
 
-  get password(){
+  get password() {
     return this.signupForm.get('password');
   }
 
-  get email(){
+  get email() {
     return this.signupForm.get('email');
   }
 
   ngOnInit(): void {
   }
 
-  signupUser(){
-    this.authService.signUp(this.signupForm.value).subscribe((res)=>{
-      if(res.result){
+  signupUser() {
+    this.authService.signUp(this.signupForm.value).subscribe((res) => {
+      if (res) {
+        console.log(res);
         this.signupForm.reset();
         this.router.navigate(['signin']);
       }
-    })
+    }, err => { alert(err) });
   }
 }

@@ -9,32 +9,34 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-  endpoint: string = 'http://localhost:4000/api';
+  endpoint: string =
+    'http://localhost:3000';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
   currentUser: { name: string, email: string, _id: string } = { name: '', email: '', _id: '' }
 
   constructor(private http: HttpClient, private router: Router) { }
 
   signUp(user: User): Observable<any> {
-    let api = `${this.endpoint}/register-user`;
+    let api = `${this.endpoint}/register`;
     return this.http.post(api, user).pipe(catchError(this.handleError))
   }
 
   signIn(user: User) {
-    return this.http.post<any>(`${this.endpoint}/signin`, user).subscribe((res: any) => {
-      localStorage.setItem('access_token', res.token);
-      this.getUserProfile(res._id).subscribe((res: any) => {
+    const api = `${this.endpoint}/login`;
+    return this.http.post<any>(api, user).subscribe((res: any) => {
+      localStorage.setItem('access_token', res.token)
+      this.getStudios().subscribe((res: any) => {
         this.currentUser = res;
-        this.router.navigate(['user-profile/' + res.msg._id])
+        this.router.navigate(['movies']);
       })
     })
   }
 
-  getUserProfile(id: any): Observable<any> {
-    let api = `${this.endpoint}/user-profile/${id}`;
+  getStudios() {
+    const api = `${this.endpoint}/movies`;
     return this.http.get(api, { headers: this.headers }).pipe(map((res: any) => {
-      return res || {}
-    }), catchError(this.handleError))
+      return res || {};
+    }), catchError(this.handleError));
   }
 
   getToken() {
