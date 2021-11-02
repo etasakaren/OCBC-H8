@@ -66,7 +66,7 @@
                         </span>
                     </div>
                 </div>
-                <button type="submit " class="btn btn-accent ">Edit</button>
+                <button [disabled]="!read.title||!read.firstName||!read.lastName||!read.role||!read.email" type="submit " class="btn btn-accent ">Edit</button>
                 <button class="btn btn-error " (click)=" cancel() ">
                     Cancel
                 </button>
