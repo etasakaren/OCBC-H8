@@ -66,6 +66,7 @@ export class UpdateComponent implements OnInit {
         response => {
           alert("Successfully edited.");
           this.router.navigate(['/read']);
+          console.log(data);
         },
         error => {
           console.log(error);

@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestButtonComponent } from './components/test-button/test-button.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestButtonComponent
+    TestButtonComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
