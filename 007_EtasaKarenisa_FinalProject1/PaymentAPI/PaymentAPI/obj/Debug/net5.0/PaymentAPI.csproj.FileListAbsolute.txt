@@ -51,3 +51,4 @@ D:\aetaProjects\OCBC Projects\007_EtasaKarenisa_FinalProject1\PaymentAPI\Payment
 D:\aetaProjects\OCBC Projects\007_EtasaKarenisa_FinalProject1\PaymentAPI\PaymentAPI\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
 D:\aetaProjects\OCBC Projects\007_EtasaKarenisa_FinalProject1\PaymentAPI\PaymentAPI\bin\Debug\net5.0\Humanizer.dll
 D:\aetaProjects\OCBC Projects\007_EtasaKarenisa_FinalProject1\PaymentAPI\PaymentAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\aetaProjects\OCBC Projects\007_EtasaKarenisa_FinalProject1\PaymentAPI\PaymentAPI\obj\Debug\net5.0\PaymentAPI.csproj.CopyComplete

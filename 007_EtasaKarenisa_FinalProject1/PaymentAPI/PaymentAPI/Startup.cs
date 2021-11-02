@@ -27,6 +27,7 @@ namespace PaymentAPI
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins"; //for cors
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -37,6 +38,15 @@ namespace PaymentAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  builder =>
+                                  {
+                                      builder.WithOrigins("*").AllowAnyHeader().AllowAnyMethod();
+                                      ;
+                                  });
+            }); //for cors
             services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig"));
             services.AddMvc(options =>
             {
@@ -106,9 +116,11 @@ namespace PaymentAPI
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PaymentAPI v1"));
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection(); for cors
 
             app.UseRouting();
+
+            app.UseCors(MyAllowSpecificOrigins); //for cors
 
             app.UseAuthentication();
 
