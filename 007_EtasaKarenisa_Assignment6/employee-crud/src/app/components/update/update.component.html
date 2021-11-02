@@ -1,62 +1,75 @@
 <div class="auth-wrapper">
-    <form class="form-signin" (ngSubmit)="update($event)">
+    <form [formGroup]="form.inputData" class="form-signin" (ngSubmit)="update(id)">
         <div *ngFor="let read of reads">
             <div *ngIf="read.id==id">
                 <h3 class="h3 mb-3 font-weight-normal">Please Fill In The Form</h3>
-                <div class="form-group mt-3">
-                    <h4>Title</h4>
-                    <input type="text" [(ngModel)]="read.title" name="read.title" placeholder="{{read.title}}" required>
-                    <span style="color:red;" *ngIf="read.title && read.title.touched && read.title.invalid">
-                        Title is required. Minimum length is 5.
-                    </span>
+                <div class="form-group">
+                    <div class="form-group mt-3">
+                        <h4>Title</h4>
+                        <input type="text" [(ngModel)]="read.title" class="form-control" formControlName="title" name="title" id="title" placeholder="{{read.title}}" required>
+                        <span style="color:red;" *ngIf="title && title.touched && title.invalid">
+                            Title is required. Minimum length is 5.
+                        </span>
+                    </div>
                 </div>
-                <div class="form-group mt-3">
-                    <h4>First Name</h4>
-                    <input type="text" [(ngModel)]="read.firstName" name="read.firstName" placeholder="{{read.firstName}}" required>
-                    <span style="color:red;" *ngIf="read.firstName && read.firstName.touched && read.firstName.invalid">
-                        First Name is required. Minimum length is 5.
-                    </span>
+                <div class="form-group">
+                    <div class="form-group mt-3">
+                        <h4>First Name</h4>
+                        <input type="text" [(ngModel)]="read.firstName" class="form-control" formControlName="firstName" name=" firstName " id="firstName " placeholder="{{read.firstName}}" required>
+                        <span style="color:red; " *ngIf="firstName && firstName.touched && firstName.invalid ">
+                            First Name is required. Minimum length is 5.
+                        </span>
+                    </div>
                 </div>
-                <div class="form-group mt-3">
-                    <h4>Last Name</h4>
-                    <input type="text" [(ngModel)]="read.lastName" name="read.lastName" placeholder="{{read.lastName}}" required>
-                    <span style="color:red;" *ngIf="read.lastName && read.lastName.touched && read.lastName.invalid">
-                        Last Name is required. Minimum length is 5.
-                    </span>
+                <div class="form-group">
+                    <div class="form-group mt-3 ">
+                        <h4>Last Name</h4>
+                        <input type="text " [(ngModel)]="read.lastName" class="form-control " formControlName="lastName" name="lastName " id="lastName " placeholder="{{read.lastName}}" required>
+                        <span style="color:red; " *ngIf="lastName && lastName.touched && lastName.invalid ">
+                            Last Name is required. Minimum length is 5.
+                        </span>
+                    </div>
                 </div>
-                <div class="form-group mt-3">
-                    <h4>Role</h4>
-                    <input type="text" [(ngModel)]="read.role" name="read.role" placeholder="{{read.role}}" required>
-                    <span style="color:red;" *ngIf="read.role && read.role.touched && read.role.invalid">
-                        Role is required. Minimum length is 4.
-                    </span>
+                <div class="form-group ">
+                    <div class="form-group mt-3 ">
+                        <h4>Role</h4>
+                        <input type="text " [(ngModel)]="read.role" class="form-control " formControlName="role" name="role " id="role " placeholder="{{read.role}}" required>
+                        <span style="color:red; " *ngIf="role && role.touched && role.invalid ">
+                            Role is required. Minimum length is 4.
+                        </span>
+                    </div>
                 </div>
-                <div class="form-group mt-3">
-                    <h4>Email</h4>
-                    <input type="email" [(ngModel)]="read.email" name="read.email" placeholder="{{read.email}}" required>
-                    <span style="color:red;" *ngIf="read.email && read.email.touched && read.email.invalid">
-                        Email is required. Must input email type.
-                    </span>
+                <div class="form-group ">
+                    <div class="form-group mt-3 ">
+                        <h4>Email</h4>
+                        <input type="email " [(ngModel)]="read.email" class="form-control " formControlName="email" name="email " id="email " placeholder="{{read.email}}" required>
+                        <span style="color:red; " *ngIf="email && email.touched && email.invalid ">
+                            Email is required. Must input email type.
+                        </span>
+                    </div>
                 </div>
-                <div class="form-group mt-3">
-                    <h4>Password</h4>
-                    <input type="password" [(ngModel)]="read.password" name="read.password" placeholder="{{read.password}}" required>
-                    <span style="color:red;" *ngIf="read.password && read.password.touched && read.password.invalid">
-                        Password is required. Minimum length is 6.
-                    </span>
+                <div class="form-group " style="display:none">
+                    <div class="form-group mt-3 ">
+                        <h4>Password</h4>
+                        <input type="password " [(ngModel)]="read.password" class="form-control " formControlName="password" name="password " id="password " placeholder="{{read.password}}" required>
+                        <span style="color:red; " *ngIf="password && password.touched && password.invalid ">
+                            Password is required. Minimum length is 6.
+                        </span>
+                    </div>
                 </div>
-                <div class="form-group mt-3">
-                    <h4>Confirm Password</h4>
-                    <input type="password" [(ngModel)]="read.confirmPassword" name=" read.confirmPassword " placeholder="{{read.confirmPassword}} " required>
-                    <span style=" color:red; " *ngIf="read.confirmPassword && read.confirmPassword.touched && read.confirmPassword.invalid ">
-                        Password is required. Minimum length is 6.
-                    </span>
+                <div class="form-group " style="display:none">
+                    <div class="form-group mt-3 ">
+                        <h4>Confirm Password</h4>
+                        <input type="password " [(ngModel)]="read.passwordConfirm" class="form-control " formControlName="confirmPassword" name="confirmPassword " id="confirmPassword " placeholder="{{read.confirmPassword}}" required>
+                        <span style=" color:red; " *ngIf="confirmPassword && confirmPassword.touched && confirmPassword.invalid ">
+                            Password is required. Minimum length is 6.
+                        </span>
+                    </div>
                 </div>
                 <button type="submit " class="btn btn-accent ">Edit</button>
                 <button class="btn btn-error " (click)=" cancel() ">
                     Cancel
                 </button>
-
             </div>
         </div>
     </form>

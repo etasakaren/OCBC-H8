@@ -2,7 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EmployeeService } from 'src/app/services/employee.service';
 import { Location } from '@angular/common';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Employee } from 'src/app/models/Employee';
 
 @Component({
@@ -11,7 +11,7 @@ import { Employee } from 'src/app/models/Employee';
   styleUrls: ['./update.component.css']
 })
 export class UpdateComponent implements OnInit {
-  @Output() newEmployeeEvent = new EventEmitter<Employee>();
+  // @Output() newEmployeeEvent = new EventEmitter<Employee>();
   constructor(private employeeService: EmployeeService, private router: Router, private route: ActivatedRoute, private location: Location,) { }
 
   reads: any;
@@ -19,6 +19,20 @@ export class UpdateComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
     this.retrieveEmployee();
+  }
+
+  id!: number
+
+  form = {
+    inputData: new FormGroup({
+      title: new FormControl('', [Validators.required, Validators.minLength(5)]),
+      firstName: new FormControl('', [Validators.required, Validators.minLength(5)]),
+      lastName: new FormControl('', [Validators.required, Validators.minLength(5)]),
+      role: new FormControl('', [Validators.required, Validators.minLength(4)]),
+      password: new FormControl('', [Validators.required, Validators.minLength(6)]),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      confirmPassword: new FormControl('', [Validators.required, Validators.minLength(6)]),
+    })
   }
 
   retrieveEmployee(): void {
@@ -32,46 +46,37 @@ export class UpdateComponent implements OnInit {
         });
   }
 
-  id!: number;
-  currentTitle = new FormControl('');
-  currentFirst = new FormControl('');
-  currentLast = new FormControl('');
-  currentRole = new FormControl('');
-  currentPassword = new FormControl('');
-  currentEmail = new FormControl('');
-  currentConfirm = new FormControl('');
+  get title(){
+    return this.form.inputData.get('title')
+  }
+  get firstName(){
+    return this.form.inputData.get('firstName')
+  }
+  get lastName(){
+    return this.form.inputData.get('lastName')
+  }
+  get role(){
+    return this.form.inputData.get('role')
+  }
+  get email(){
+    return this.form.inputData.get('email')
+  }
+  get password(){
+    return this.form.inputData.get('password')
+  }
+  get confirmPassword(){
+    return this.form.inputData.get('confirmPassword')
+  }
 
-
-
-  update(updatedValue:any) {
-    let data = {
-      title: this.currentTitle.setValue(this.currentTitle),
-      firstName: this.currentFirst.setValue(this.currentFirst),
-      lastName: this.currentLast.setValue(this.currentLast),
-      role: this.currentRole.setValue(this.currentRole),
-      password: this.currentPassword.setValue(this.currentPassword),
-      email: this.currentEmail.setValue(this.currentEmail),
-      confirmPassword: this.currentConfirm.setValue(this.currentConfirm),
-    }
-    this.currentTitle=updatedValue.title;
-    this.currentFirst=updatedValue.firstName;
-    this.currentLast=updatedValue.lastName;
-    this.currentRole=updatedValue.role;
-    this.currentPassword=updatedValue.password;
-    this.currentEmail=updatedValue.email;
-    this.currentConfirm=updatedValue.confirmPassword;
-    console.log(updatedValue.title);
-    this.employeeService.update(this.id, data)
-      .subscribe(
-        response => {
-          alert("Successfully edited.");
-          this.router.navigate(['/read']);
-          console.log(data);
-        },
-        error => {
-          console.log(error);
-        });
-
+  update(id:number){
+    this.employeeService.update(this.form.inputData.value,id)
+    .subscribe((res) =>{
+      if(res){
+        this.form.inputData.reset();
+        alert("Successfully edited.");
+        this.router.navigate(['/read'])
+      }
+    })
   }
 
   cancel() {
@@ -83,4 +88,5 @@ export class UpdateComponent implements OnInit {
       // this.router.navigate(['/read']);
     }
   }
+  
 }

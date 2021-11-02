@@ -29,9 +29,9 @@ export class EmployeeService {
     return this.http.post(api, data).pipe(catchError(this.handleError));
   }
 
-  update(id: number, data: any): Observable<any> {
+  update(data: any,id: number): Observable<any> {
     const api = `${this.endpoint}/users`;
-    return this.http.put(`${api}/${id}`, data).pipe(catchError(this.handleError));
+    return this.http.put(`${api}/${id}`,data).pipe( catchError(this.handleError))
   }
 
   handleError(error: HttpErrorResponse) {
