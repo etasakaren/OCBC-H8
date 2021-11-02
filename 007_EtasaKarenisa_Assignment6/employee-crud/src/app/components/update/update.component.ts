@@ -41,19 +41,27 @@ export class UpdateComponent implements OnInit {
   currentEmail = new FormControl('');
   currentConfirm = new FormControl('');
 
-  data = {
-    title: this.currentTitle.setValue(this.currentTitle),
-    firstName: this.currentFirst.setValue(this.currentFirst),
-    lastName: this.currentLast.setValue(this.currentLast),
-    role: this.currentRole.setValue(this.currentRole),
-    password: this.currentPassword.setValue(this.currentPassword),
-    email: this.currentEmail.setValue(this.currentEmail),
-    confirmPassword: this.currentConfirm.setValue(this.currentConfirm),
-  }
 
-  update() {
-    console.log()
-    this.employeeService.update(this.id, this.data)
+
+  update(updatedValue:any) {
+    let data = {
+      title: this.currentTitle.setValue(this.currentTitle),
+      firstName: this.currentFirst.setValue(this.currentFirst),
+      lastName: this.currentLast.setValue(this.currentLast),
+      role: this.currentRole.setValue(this.currentRole),
+      password: this.currentPassword.setValue(this.currentPassword),
+      email: this.currentEmail.setValue(this.currentEmail),
+      confirmPassword: this.currentConfirm.setValue(this.currentConfirm),
+    }
+    this.currentTitle=updatedValue.title;
+    this.currentFirst=updatedValue.firstName;
+    this.currentLast=updatedValue.lastName;
+    this.currentRole=updatedValue.role;
+    this.currentPassword=updatedValue.password;
+    this.currentEmail=updatedValue.email;
+    this.currentConfirm=updatedValue.confirmPassword;
+    console.log(updatedValue.title);
+    this.employeeService.update(this.id, data)
       .subscribe(
         response => {
           alert("Successfully edited.");
