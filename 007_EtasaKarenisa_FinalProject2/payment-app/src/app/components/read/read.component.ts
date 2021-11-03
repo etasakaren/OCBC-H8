@@ -1,8 +1,12 @@
 import { Component, Input, OnInit, TemplateRef, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 import { ItemDataService } from 'src/app/services/item-data.service';
+import { NavbarService } from 'src/app/services/navbar.service';
 import { CreateComponent } from '../create/create.component';
 import { DeleteComponent } from '../delete/delete.component';
+import { Location } from '@angular/common';
+import { UpdateComponent } from '../update/update.component';
 
 @Component({
   selector: 'app-read',
@@ -11,40 +15,41 @@ import { DeleteComponent } from '../delete/delete.component';
 })
 export class ReadComponent implements OnInit {
   @Input()
-  id?: number;
+  paymentDetailId?: number;
   reads: any;
-
-  constructor(private itemDataService: ItemDataService, private router: Router) { }
+  createData: any;
+  updateData:any;
+  constructor(public itemDataService: ItemDataService, private router: Router, private navBar: NavbarService, public location: Location, public activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.retrieveEmployee();
+    this.createData = new CreateComponent(this.itemDataService, this.router, this.navBar,this.location);
+    this.updateData = new UpdateComponent(this.itemDataService, this.router, this.activatedRoute,this.location,this.navBar);
+    this.navBar.show();
+    this.itemDataService
+      .getAll()
+      .subscribe((res: any) => {
+        if (res) this.reads = res
+      });
+
   }
 
-  retrieveEmployee(): void {
-    this.itemDataService.getAll()
-      .subscribe(
-        data => {
-          this.reads = data;
-        },
-        error => {
-          console.log(error);
-        });
+  delete(paymentDetailId: number): void {
+    let deleteComponent = new DeleteComponent(this.itemDataService, this.router);
+    deleteComponent.delete(paymentDetailId);
   }
 
-  delete(id: number): void {
-    // let deleteComponent = new DeleteComponent(this.itemDataService, this.router);
-    // deleteComponent.delete(id);
-  }
 
   create(): void {
-    this.router.navigate(['/create']);
+    this.createData.toggleCreate = true;
   }
 
   data = false;
-  edit(id:number) {
-    this.id = id;
+  edit(paymentDetailId: number) {
+    this.paymentDetailId = paymentDetailId;
     this.data = true;
-    this.router.navigate(['/update', id]);
+    this.updateData.toggleUpdate = true;
+    // this.router.navigate(['/update', paymentDetailId]);
   }
+  
 
 }

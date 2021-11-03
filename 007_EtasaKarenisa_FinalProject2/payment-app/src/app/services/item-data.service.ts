@@ -1,47 +1,38 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ItemDataService {
   endpoint: string =
-    'http://localhost:5000/api';
+    'http://localhost:5000/api/PaymentDetails';
 
   constructor(private http: HttpClient) { }
 
   invokeDeleteFunction = new EventEmitter();
 
   getAll(): Observable<any> {
-    const api = `${this.endpoint}/PaymentDetails`;
-    return this.http.get(api).pipe(catchError(this.handleError));
+    return this.http.get(this.endpoint)
+      .pipe(catchError(this.handleError))
   }
 
-  delete(id: number): Observable<any> {
-    const api = `${this.endpoint}/users`;
-    return this.http.delete(`${api}/${id}`).pipe(catchError(this.handleError));
+  delete(paymentDetailId: number): Observable<any> {
+    return this.http.delete(`${this.endpoint}/${paymentDetailId}`).pipe(catchError(this.handleError));
   }
 
   create(data: any): Observable<any> {
-    const api = `${this.endpoint}/users`;
-    return this.http.post(api, data).pipe(catchError(this.handleError));
+    return this.http.post(this.endpoint, data).pipe(catchError(this.handleError));
   }
 
-  update(data: any,id: number): Observable<any> {
-    const api = `${this.endpoint}/users`;
-    return this.http.put(`${api}/${id}`,data).pipe( catchError(this.handleError))
+  update(data: any, paymentDetailId: number): Observable<any> {
+    return this.http.put(`${this.endpoint}/${paymentDetailId}`, data).pipe(catchError(this.handleError))
   }
 
   handleError(error: HttpErrorResponse) {
-    console.log(error);
-    let msg = '';
-    if (error.error instanceof ErrorEvent) {
-      msg = error.error.message;
-    } else {
-      msg = `Error Code: ${error.status}\nMessage: ${error.message}`;
-    }
+    let msg=alert('Invalid input.');
     return throwError(msg);
   }
 }

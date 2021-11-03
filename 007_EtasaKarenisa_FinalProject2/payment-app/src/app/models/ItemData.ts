@@ -1,7 +1,7 @@
 export interface ItemData {
-    _id: number;
+    paymentDetailId: number;
     cardOwnerName: String,
-    cardOwner: String,
+    cardNumber: String,
     expirationDate: Date,
     securityCode: String,
 }

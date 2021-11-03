@@ -58,6 +58,7 @@ export class CreateComponent implements OnInit {
         console.log(res);
         this.submitted = true;
         this.createForm.reset();
+        window.location.reload();
         alert("Successfully added.");
         this.router.navigate(['/read']);
       }
